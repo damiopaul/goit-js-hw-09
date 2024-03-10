@@ -23,3 +23,95 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 100%;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  
+  width: calc((100% - 60px)/3);
+}
+a:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.gallery-image {
+  height: 200px;
+}
+
+.feedback-form,
+.email-label,
+.email-input,
+.text-area-label,
+.text-area,
+.submit-button {
+  display: block;
+}
+.feedback-form {
+  padding: 24px;
+}
+
+.email-label,
+.email-input,
+.text-area-label {
+  margin-bottom: 8px;
+}
+
+.email-input {
+  width: 360px;
+  height: 39px;
+  border-radius: 4px;
+}
+
+.text-area {
+  margin-bottom: 16px;
+  width: 360px;
+  height: 79px;
+  border-radius: 4px;
+
+}
+
+.submit-button {
+  width: 95px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #fff;
+  border: none;
+}
+
+
