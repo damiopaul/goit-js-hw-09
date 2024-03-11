@@ -71,17 +71,13 @@ const images = [
 
 const container = document.querySelector('.gallery');
 
-
-
-container.insertAdjacentHTML('beforeend', createMarkup(images));
-
 function createMarkup(arr) {
     return arr
         .map(
             ({ preview, original, description }) =>
                 `
         <li class="gallery-item">
-            <a class = "gallery-link" href="${original}" data-caption="${description}">
+            <a class = "gallery-link" href="${original}">
                 <img                
                     class="gallery-image"
                     src="${preview}"
@@ -93,9 +89,9 @@ function createMarkup(arr) {
         )
         .join('');
 }
+container.insertAdjacentHTML('beforeend', createMarkup(images));
 
 let gallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250
 });
-// gallery.on('show.simplelightbox', function());
